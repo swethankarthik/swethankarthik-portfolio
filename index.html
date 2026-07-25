@@ -310,8 +310,8 @@
     <div class="modal" role="dialog" aria-label="Official Resume Viewer">
       <button id="close-resume-modal-btn" class="close" title="Close Modal">&times;</button>
 
-      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.75rem; padding-right:3rem; margin-bottom:0.75rem;">
-        <div>
+      <div class="modal-header-wrapper">
+        <div class="modal-header-left">
           <div style="font-family: var(--font-heading); color: var(--accent-cyan); font-weight: 800; letter-spacing: 0.5px; font-size: 0.75rem; text-transform:uppercase; margin-bottom: 0.2rem;">
             // VERIFIED CREDENTIAL
           </div>
@@ -323,7 +323,7 @@
           </p>
         </div>
 
-        <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap;">
+        <div class="modal-header-right">
           <button id="resume-download-btn" class="btn btn-blue" style="padding:0.55rem 1.15rem; font-size:0.8rem;" type="button">
             <span>Download PDF</span>
             <span aria-hidden="true">&rarr;</span>
@@ -845,7 +845,7 @@
             const pdf = await loadingTask.promise;
             
             container.innerHTML = '';
-            const containerWidth = container.clientWidth || (window.innerWidth - 32);
+            const containerWidth = Math.min(container.clientWidth || (window.innerWidth - 32), 860);
 
             for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
               const page = await pdf.getPage(pageNum);

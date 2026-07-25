@@ -1058,12 +1058,35 @@ section:last-of-type {
   padding: 8px;
 }
 
+.modal-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-right: 3.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.modal-header-left {
+  flex: 1 1 280px;
+}
+
+.modal-header-right {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .pdf-page-canvas {
+  max-width: 860px !important;
   width: 100% !important;
   height: auto !important;
   display: block;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
-  margin-bottom: 12px;
+  margin: 0 auto 16px auto !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
   border-radius: var(--radius-sm);
 }
 
