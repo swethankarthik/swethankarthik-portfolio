@@ -1,0 +1,256 @@
+{
+  "profile": {
+    "firstName": "Avvari",
+    "middleName": "Swethan",
+    "lastName": "Karthik",
+    "titles": [
+      "AI Engineer",
+      "Software Developer",
+      "Backend Architect"
+    ],
+    "tagline": "Computer Science (AI & ML) 2027 Graduate specializing in scalable AI systems.",
+    "summary": "Computer Science (AI & ML) 2027 graduate with Accenture internship experience, specializing in Python, PyTorch, and scalable AI microservices.",
+    "email": "swethankarthik.avvari@gmail.com",
+    "phone": "+91 94535 82606",
+    "location": "Vijayawada, Andhra Pradesh, India",
+    "social": {
+      "linkedin": "https://linkedin.com/in/swethan-karthik/",
+      "github": "https://github.com/swethankarthik"
+    }
+  },
+  "education": {
+    "degree": "Bachelor of Technology (B.Tech) — Computer Science and Engineering (AI & ML)",
+    "institution": "NRI Institute of Technology",
+    "location": "Pothavarappadu, Andhra Pradesh",
+    "timeline": "2023–2027 (2027 Graduate)",
+    "aggregateScore": "8.9 CGPA",
+    "aggregateNote": "Cumulative up to 3rd Year, 2nd Semester",
+    "details": "Specialized in Artificial Intelligence, Deep Learning, Generative Models, Natural Language Processing, Computer Vision, and Enterprise Backend System Architecture."
+  },
+  "experience": [
+    {
+      "id": "accenture",
+      "role": "Associate Software Engineer Intern",
+      "company": "Accenture",
+      "location": "Hyderabad, India",
+      "type": "Summer Internship",
+      "timeline": "May 2026 – Jul 2026",
+      "certificate": "assets/certificates/accenture_certificate.pdf",
+      "responsibilities": [
+        "Developed agentic AI solutions for text summarization, FAQ assistance, meeting analysis, and multi-agent research workflows.",
+        "Built scalable serverless REST APIs using Python, Azure Functions, Azure OpenAI, and structured backend architecture.",
+        "Gained hands-on experience in prompt engineering, cloud AI application development, API integration, and agile software engineering."
+      ],
+      "technologies": [
+        "Agentic AI",
+        "Azure OpenAI",
+        "Azure Functions",
+        "Python",
+        "REST APIs",
+        "Prompt Engineering"
+      ]
+    },
+    {
+      "id": "infosys",
+      "role": "Artificial Intelligence Intern",
+      "company": "Infosys Springboard 6.0",
+      "location": "Remote",
+      "type": "Internship",
+      "timeline": "Aug 2025 – Sep 2025",
+      "certificate": "assets/certificates/infosys_certificate.pdf",
+      "responsibilities": [
+        "Built 'Mood Music AI,' an intelligent emotion-based music generation system.",
+        "Implemented NLP and Generative AI pipelines in Python to seamlessly map text to audio.",
+        "Mastered end-to-end AI product development from theoretical modeling to functional deployment."
+      ],
+      "technologies": [
+        "Mood Music AI",
+        "NLP",
+        "Generative AI",
+        "Python",
+        "Audio Pipelines"
+      ]
+    },
+    {
+      "id": "coincent",
+      "role": "Artificial Intelligence Intern",
+      "company": "Coincent.ai (IIT Madras e-Cell)",
+      "location": "Remote",
+      "type": "Internship",
+      "timeline": "Aug 2024 – Oct 2024",
+      "certificate": "assets/certificates/coincent_certificate.pdf",
+      "responsibilities": [
+        "Developed a predictive machine learning model focused on automated handwriting analysis.",
+        "Executed end-to-end data preprocessing, model training, and hyperparameter tuning in Python.",
+        "Strengthened foundational ML engineering, model evaluation, and data-driven problem-solving skills."
+      ],
+      "technologies": [
+        "Machine Learning",
+        "Handwriting Analysis",
+        "Python",
+        "Data Preprocessing",
+        "Hyperparameter Tuning"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "music-ai",
+      "name": "AI-Based Music Composition System",
+      "tagline": "Text-to-audio emotion-aligned music generation web application",
+      "problem": "Addressed the manual, time-consuming process content creators face when sourcing royalty-free, emotion-specific background audio.",
+      "solution": "Engineered a complete text-to-audio generation web application utilizing Python, PyTorch, Hugging Face Transformers, and Streamlit to output mood-aligned music tracks.",
+      "impact": "Automates background score synthesis for creators without licensing delays.",
+      "architecture": "Implemented a seamless pipeline combining BART Large MNLI for mood classification and MusicGen to instantly automate custom music generation.",
+      "keyFeatures": [
+        "NLP mood classification via BART Large MNLI",
+        "Automated melody synthesis with MusicGen",
+        "Interactive Streamlit control panel"
+      ],
+      "technologies": [
+        "Python",
+        "PyTorch",
+        "Hugging Face",
+        "Streamlit",
+        "BART Large MNLI",
+        "MusicGen"
+      ]
+    },
+    {
+      "id": "pothole-ai",
+      "name": "Pothole Detection and Reporting System",
+      "tagline": "High-performance computer vision backend for road damage reporting",
+      "problem": "Targeted the inefficiency of manual municipal road inspections that lead to delayed hazard reporting and maintenance.",
+      "solution": "Developed a high-performance computer vision backend utilizing YOLOv8, FastAPI, and Python to process visual video feeds and extract GPS-tagged road damage data.",
+      "impact": "Reduces municipal hazard reporting latency to real-time API triggers.",
+      "architecture": "Automated the hazard identification process by routing structured detection data through RESTful APIs, facilitating rapid and accurate municipal reporting.",
+      "keyFeatures": [
+        "Real-time video stream object detection with YOLOv8",
+        "GPS hazard coordinate extraction",
+        "RESTful API dispatch via FastAPI"
+      ],
+      "technologies": [
+        "YOLOv8",
+        "FastAPI",
+        "Python",
+        "Computer Vision",
+        "GPS Telemetry"
+      ]
+    },
+    {
+      "id": "nutrisync",
+      "name": "NutriSync: AI-Powered Personalized Dietitian System",
+      "tagline": "API-driven diet planning engine with dynamic caloric algorithms",
+      "problem": "Solved the complexity individuals face when manually calculating macronutrients and translating raw health metrics into actionable dietary goals.",
+      "solution": "Built an automated, API-driven diet planning engine in Python, integrating PDF generation libraries to dynamically calculate complex caloric and macronutrient algorithms.",
+      "impact": "Converts raw biometric metrics into downloadable custom diet reports instantly.",
+      "architecture": "Streamlined nutritional tracking by building a dynamic backend system that instantly processes user parameters to serve customized, downloadable diet plan reports.",
+      "keyFeatures": [
+        "Dynamic macro algorithm calculation",
+        "Instant PDF report generation",
+        "Modular backend architecture"
+      ],
+      "technologies": [
+        "Python",
+        "PDF Generation",
+        "API Engine",
+        "Nutritional Algorithms"
+      ]
+    }
+  ],
+  "skills": {
+    "programming": [
+      { "name": "Python" },
+      { "name": "Java" },
+      { "name": "C" }
+    ],
+    "ai_ml": [
+      { "name": "PyTorch" },
+      { "name": "YOLOv8" },
+      { "name": "Hugging Face Transformers" },
+      { "name": "NLP" },
+      { "name": "Computer Vision" },
+      { "name": "Generative AI" }
+    ],
+    "web_backend": [
+      { "name": "FastAPI" },
+      { "name": "Streamlit" },
+      { "name": "React" },
+      { "name": "HTML5" },
+      { "name": "CSS3" },
+      { "name": "JavaScript" }
+    ],
+    "databases_tools": [
+      { "name": "MongoDB" },
+      { "name": "Firebase" },
+      { "name": "SQL Server" },
+      { "name": "Git" },
+      { "name": "GitHub" },
+      { "name": "VS Code" },
+      { "name": "Jupyter Notebook" }
+    ]
+  },
+  "achievements": {
+    "certifications": [
+      {
+        "name": "Salesforce Agentforce Specialist Certification",
+        "issuer": "Salesforce",
+        "certificate": "assets/certificates/salesforce_agentforce_certificate.pdf"
+      },
+      {
+        "name": "HackerRank Python (Basic) Certification",
+        "issuer": "HackerRank",
+        "certificate": "assets/certificates/hackerrank_python_certificate.pdf"
+      },
+      {
+        "name": "NPTEL — Introduction to Internet of Things",
+        "issuer": "NPTEL / IIT Kharagpur",
+        "certificate": "assets/certificates/nptel_iot_certificate.pdf"
+      },
+      {
+        "name": "DX Edge Professional Certification",
+        "issuer": "DX Edge",
+        "certificate": "assets/certificates/dx_edge_certificate.png"
+      },
+      {
+        "name": "Avishkandhra State Govt Certification",
+        "issuer": "Government of Andhra Pradesh",
+        "certificate": "assets/certificates/avishkandhra_ap_govt_certificate.pdf"
+      },
+      {
+        "name": "APSSDC Summer Internship Certification",
+        "issuer": "APSSDC",
+        "certificate": "assets/certificates/apssdc_certificate.pdf"
+      },
+      {
+        "name": "Coding Missions Internship Certification",
+        "issuer": "Coding Missions",
+        "certificate": "assets/certificates/coding_missions_certificate.pdf"
+      },
+      {
+        "name": "Motioncut Internship Completion Certificate",
+        "issuer": "Motioncut",
+        "certificate": "assets/certificates/motioncut_certificate.pdf"
+      }
+    ],
+    "hackathons": [
+      {
+        "title": "Adobe Hackathon (Round 1) Participation",
+        "project": "National Qualifier",
+        "certificate": "assets/certificates/adobe_hackathon_certificate.pdf"
+      },
+      {
+        "title": "Google Cloud Agentic AI Hackathon",
+        "project": "Multi-Agent System Build"
+      },
+      {
+        "title": "MindSprint Hackathon",
+        "project": "Participant"
+      },
+      {
+        "title": "HackVibe 2K25",
+        "project": "Participant"
+      }
+    ]
+  }
+}

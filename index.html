@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avvari Swethan Karthik</title>
+
+  <!-- Favicon Monogram Mark (A in Cyan Blue, SK in White) -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="shortcut icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Avvari Swethan Karthik">
+  <meta property="og:description" content="Computer Science (AI & ML) 2027 graduate with Accenture internship experience, specializing in Python, PyTorch, and scalable AI microservices.">
+  <meta property="og:type" content="website">
+
+  <!-- PDF.js Engine for Zero-Margin High-DPI Vector Canvas Certificate Rendering -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+  <!-- Master Agency Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 1. HIGH-PERFORMANCE 165Hz AMBIENT CANVAS & MESH GLOW -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="ambient-glow-spot" aria-hidden="true"></div>
+
+  <!-- TOAST NOTIFICATION PILL -->
+  <div id="toast-pill" class="toast-pill"></div>
+
+  <!-- 2. TOP NAVIGATION HEADER -->
+  <header class="site-header" id="site-header">
+    <a class="brand-logo" href="#hero" aria-label="Avvari Swethan Karthik Portfolio Home">
+      <span class="logo-mark">
+        <span class="logo-initial-a">A</span><span class="logo-initial-sk">SK</span>
+      </span>
+    </a>
+
+    <nav class="nav-links" id="desktop-nav">
+      <a href="#hero" class="active">Overview</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#achievements">Credentials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div style="display:flex; align-items:center; gap:0.85rem;">
+      <button class="header-cta btn-resume-modal-trigger" type="button">
+        Resume PDF &rarr;
+      </button>
+
+      <button id="mobile-toggle-btn" class="mobile-toggle" aria-label="Toggle navigation menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- 3. MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-drawer" class="mobile-drawer">
+    <a href="#hero">Overview</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="#achievements">Credentials</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- 4. MAIN CONTENT CONTAINER -->
+  <main>
+
+    <!-- SECTION 1: CENTERED HERO OVERVIEW -->
+    <section id="hero" class="hero-section">
+      <div class="hero-pill-badge">
+        <span class="pulse-emerald"></span>
+        <span>2027 GRADUATE • AVAILABLE FOR AI & BACKEND ROLES</span>
+      </div>
+
+      <h1 class="hero-full-name">
+        <span class="name-highlight">AVVARI SWETHAN KARTHIK</span>
+      </h1>
+
+      <!-- SHORT HERO SUMMARY DIRECTLY BELOW NAME (NON-REPEATING ELEGANT PHRASING) -->
+      <p class="hero-short-summary">
+        Computer Science candidate skilled in agentic workflows, deep neural models, and cloud-native API design.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-blue" href="#projects">
+          <span>Explore Work</span>
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+        <button class="btn btn-dark btn-resume-modal-trigger" type="button">
+          <span>View Resume PDF</span>
+        </button>
+      </div>
+
+      <!-- Real-Time Proof Stat Cards Grid -->
+      <div class="hero-stats-row">
+        <div class="hero-stat-card">
+          <div class="stat-val">2027</div>
+          <div class="stat-lbl">B.Tech Graduate</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="stat-val">8.9</div>
+          <div class="stat-lbl">CGPA (upto 3-2 sem)</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="stat-val">3</div>
+          <div class="stat-lbl">Corporate Internships</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="stat-val">3+</div>
+          <div class="stat-lbl">Production AI Systems</div>
+        </div>
+      </div>
+
+      <!-- Tech Stack Ticker Grid -->
+      <div class="logos-banner-grid">
+        <div class="logo-banner-card">Python</div>
+        <div class="logo-banner-card">PyTorch</div>
+        <div class="logo-banner-card">Agentic AI</div>
+        <div class="logo-banner-card">FastAPI</div>
+        <div class="logo-banner-card">YOLOv8</div>
+        <div class="logo-banner-card">Azure OpenAI</div>
+        <div class="logo-banner-card">MongoDB</div>
+        <div class="logo-banner-card">Git & GitHub</div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT ME -->
+    <section id="about">
+      <div class="sec-header">
+        <div class="sec-tag">01 / ABOUT ME</div>
+        <h2 class="sec-title">Engineering Scalable Intelligence</h2>
+        <p class="sec-desc">
+          Focused on constructing autonomous multi-agent systems, real-time spatial object tracking, and high-throughput microservice architectures.
+        </p>
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <div class="card" style="padding:2.25rem;">
+          <div style="font-family:var(--font-heading); font-size:0.8rem; font-weight:800; color:var(--accent-cyan); letter-spacing:1px; margin-bottom:1rem; text-transform:uppercase;">
+            // EXECUTIVE SUMMARY
+          </div>
+          <p id="bio-summary-text" style="color:var(--text-secondary); font-size:1.15rem; line-height:1.7; min-height:120px; font-weight:500;">
+            Computer Science (AI & ML) 2027 graduate with Accenture internship experience, specializing in Python, PyTorch, and scalable AI microservices.
+          </p>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:1.2rem;">
+          <div class="card" style="padding:1.4rem;">
+            <div style="display:flex; align-items:center; gap:1rem;">
+              <div style="width:44px; height:44px; border-radius:12px; background:rgba(56, 189, 248, 0.1); border:1px solid rgba(56, 189, 248, 0.3); display:flex; align-items:center; justify-content:center; color:var(--accent-cyan); flex-shrink:0;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+              </div>
+              <div>
+                <h3 style="font-family:var(--font-heading); font-size:1.1rem; color:var(--text-primary); font-weight:800;">Agentic AI & Serverless APIs</h3>
+                <p style="color:var(--text-secondary); font-size:0.9rem; margin-top:0.25rem;">Built multi-agent research workflows, NLP summarization engines, and serverless REST APIs using Azure Functions at Accenture.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="padding:1.4rem;">
+            <div style="display:flex; align-items:center; gap:1rem;">
+              <div style="width:44px; height:44px; border-radius:12px; background:rgba(56, 189, 248, 0.1); border:1px solid rgba(56, 189, 248, 0.3); display:flex; align-items:center; justify-content:center; color:var(--accent-cyan); flex-shrink:0;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </div>
+              <div>
+                <h3 style="font-family:var(--font-heading); font-size:1.1rem; color:var(--text-primary); font-weight:800;">Computer Vision & Neural Models</h3>
+                <p style="color:var(--text-secondary); font-size:0.9rem; margin-top:0.25rem;">Engineered real-time road hazard detection systems with YOLOv8 and high-concurrency FastAPI microservices.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="padding:1.4rem;">
+            <div style="display:flex; align-items:center; gap:1rem;">
+              <div style="width:44px; height:44px; border-radius:12px; background:rgba(56, 189, 248, 0.1); border:1px solid rgba(56, 189, 248, 0.3); display:flex; align-items:center; justify-content:center; color:var(--accent-cyan); flex-shrink:0;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+              </div>
+              <div>
+                <h3 style="font-family:var(--font-heading); font-size:1.1rem; color:var(--text-primary); font-weight:800;">Generative AI & Audio Synthesis</h3>
+                <p style="color:var(--text-secondary); font-size:0.9rem; margin-top:0.25rem;">Constructed text-to-audio emotion music pipelines utilizing BART Large MNLI prompt analysis and Meta MusicGen models.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: SKILLS MATRIX -->
+    <section id="skills">
+      <div class="sec-header">
+        <div class="sec-tag">02 / TECHNICAL COMPETENCIES</div>
+        <h2 class="sec-title">Skills & Technology Ecosystem</h2>
+        <p class="sec-desc">
+          A clear breakdown of languages, frameworks, neural network models, and cloud tools I bring to engineering teams.
+        </p>
+      </div>
+
+      <div id="skills-container" class="skills-grid">
+        <!-- Dynamically rendered -->
+      </div>
+
+      <div class="marquee-box">
+        <div id="marquee-track" class="marquee-track">
+          <!-- Marquee logo pills rendered dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: FEATURED CASE STUDIES -->
+    <section id="projects">
+      <div class="sec-header">
+        <div class="sec-tag">03 / FEATURED WORK</div>
+        <h2 class="sec-title">Case Studies & AI Systems</h2>
+        <p class="sec-desc">
+          End-to-end intelligent products built across Audio Synthesis, Computer Vision Telemetry, and Dynamic Health Analytics.
+        </p>
+      </div>
+
+      <div id="projects-container" class="projects-grid">
+        <!-- Dynamically rendered -->
+      </div>
+    </section>
+
+    <!-- SECTION 5: CAREER EXPERIENCE TIMELINE -->
+    <section id="experience">
+      <div class="sec-header">
+        <div class="sec-tag">04 / WORK HISTORY</div>
+        <h2 class="sec-title">Corporate Internships & Roles</h2>
+        <p class="sec-desc">
+          Click any internship to inspect and download its verified completion certificate.
+        </p>
+      </div>
+
+      <div id="experience-container" class="experience-list">
+        <!-- Dynamically rendered -->
+      </div>
+    </section>
+
+    <!-- SECTION 6: ACHIEVEMENTS & CERTIFICATIONS -->
+    <section id="achievements">
+      <div class="sec-header">
+        <div class="sec-tag">05 / CREDENTIALS</div>
+        <h2 class="sec-title">Certifications & Hackathons</h2>
+        <p class="sec-desc">
+          Industry recognized certifications and competitive engineering hackathon achievements. Click any certification to view or download.
+        </p>
+      </div>
+
+      <div id="achievements-container" class="achievements-grid">
+        <!-- Dynamically rendered -->
+      </div>
+    </section>
+
+    <!-- SECTION 7: DIRECT CONTACT & EMAIL REDIRECT -->
+    <section id="contact">
+      <div class="sec-header">
+        <div class="sec-tag">06 / CONNECT</div>
+        <h2 class="sec-title">GET IN TOUCH</h2>
+        <p class="sec-desc">
+          Interested in hiring or collaborating on high-impact software projects? Reach out directly via email or connect across professional networks.
+        </p>
+
+        <div style="margin: 2.25rem 0; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+          <a class="btn btn-blue btn-email-trigger" href="https://mail.google.com/mail/?view=cm&fs=1&to=swethankarthik.avvari@gmail.com" target="_blank" rel="noopener noreferrer">
+            <span>Send Email Direct</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+          <button class="btn btn-dark btn-resume-modal-trigger" type="button">
+            <span>View Resume PDF</span>
+          </button>
+        </div>
+
+        <div id="contact-cards" class="contact-grid">
+          <!-- Dynamically rendered: Direct mailto card, Phone, LinkedIn, GitHub -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 5. SITE FOOTER -->
+  <footer class="site-footer">
+    <div style="max-width:1240px; margin:0 auto; padding:0 2rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+      <div>
+        © 2026 <strong>Avvari Swethan Karthik</strong> — Corporate AI Engineering Portfolio.
+      </div>
+      <div>
+        <a href="#hero" style="color:var(--text-primary); text-decoration:none; font-weight:800; font-family:var(--font-heading);">Back to Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 6. SEAMLESS UI-BLENDED RESUME PDF MODAL VIEWER -->
+  <div id="resume-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-label="Official Resume Viewer">
+      <button id="close-resume-modal-btn" class="close" title="Close Modal">&times;</button>
+
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem; padding-right:3rem; margin-bottom:1rem;">
+        <div>
+          <div style="font-family: var(--font-heading); color: var(--accent-cyan); font-weight: 800; letter-spacing: 0.5px; font-size: 0.78rem; text-transform:uppercase; margin-bottom: 0.2rem;">
+            // VERIFIED CREDENTIAL
+          </div>
+          <h2 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--text-primary); margin-bottom: 0.2rem;">
+            Avvari Swethan Karthik — Official Resume
+          </h2>
+          <p style="color: var(--text-secondary); font-size: 0.88rem;">
+            Computer Science (AI & ML) Engineer • 2027 Graduate • 8.9 CGPA
+          </p>
+        </div>
+
+        <div style="display:flex; gap:0.6rem; align-items:center;">
+          <button id="resume-download-btn" class="btn btn-blue" style="padding:0.65rem 1.4rem; font-size:0.8rem;" type="button">
+            <span>Download PDF</span>
+            <span aria-hidden="true">&rarr;</span>
+          </button>
+          <button id="resume-fullscreen-btn" class="btn btn-dark" style="padding:0.65rem 1.4rem; font-size:0.8rem;" type="button">
+            <span>Fullscreen</span>
+            <span aria-hidden="true">&rarr;</span>
+          </button>
+        </div>
+      </div>
+      
+      <div class="pdf-view-wrapper">
+        <iframe src="assets/resume/resume.pdf#toolbar=0&navpanes=0&scrollbar=1&view=FitH" class="pdf-iframe" title="Resume Document Viewer">
+          <p style="color: var(--text-secondary); padding: 2rem; text-align: center;">
+            Your browser does not support inline PDF previews. Download the file directly:
+            <a href="assets/resume/resume.pdf" download="Avvari_Swethan_Karthik_Resume.pdf" style="color: var(--accent-cyan);">Download Resume PDF</a>
+          </p>
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. INTERNSHIP & CERTIFICATION MODAL VIEWER (TIGHT ZERO-MARGIN CANVAS RENDERED) -->
+  <div id="certificate-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-label="Internship & Certification Viewer">
+      <button id="close-cert-modal-btn" class="close" title="Close Modal">&times;</button>
+
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem; padding-right:3rem; margin-bottom:1rem;">
+        <div>
+          <div style="font-family: var(--font-heading); color: var(--accent-cyan); font-weight: 800; letter-spacing: 0.5px; font-size: 0.78rem; text-transform:uppercase; margin-bottom: 0.2rem;">
+            // VERIFIED CREDENTIAL DOCUMENT
+          </div>
+          <h2 id="cert-modal-title" style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--text-primary); margin-bottom: 0.2rem;">
+            Credential Document
+          </h2>
+          <p id="cert-modal-company" style="color: var(--text-secondary); font-size: 0.88rem;"></p>
+        </div>
+
+        <div style="display:flex; gap:0.6rem; align-items:center;">
+          <a id="cert-modal-download-btn" href="#" download class="btn btn-blue" style="padding:0.65rem 1.4rem; font-size:0.8rem;">
+            <span>Download Certificate</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+      
+      <div id="cert-view-container" class="cert-view-wrapper">
+        <canvas id="cert-pdf-canvas" style="width:100%; height:auto; max-height:75vh; object-fit:contain; display:block; border-radius:var(--radius-md);"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. PROJECT DETAILS CASE STUDY MODAL -->
+  <div id="project-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-label="Project Case Study Deep Dive">
+      <button id="close-project-modal-btn" class="close" title="Close Modal">&times;</button>
+
+      <div style="font-family: var(--font-heading); color: var(--accent-cyan); font-weight: 800; letter-spacing: 0.8px; font-size: 0.8rem; margin-bottom: 0.25rem;">
+        CASE STUDY DEEP DIVE
+      </div>
+      <h2 id="pm-title" style="font-family: var(--font-heading); font-size: 1.8rem; color: var(--text-primary); margin-bottom: 0.4rem;"></h2>
+      <p id="pm-subtitle" style="color: var(--accent-cyan); font-family: var(--font-heading); font-size: 1rem; font-weight: 700; margin-bottom: 1.5rem;"></p>
+
+      <div id="pm-tags" class="skill-tags" style="margin-bottom: 1.5rem;"></div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+        <div style="background: var(--bg-subtle); border: 1px solid var(--border-light); padding: 1.25rem; border-radius: var(--radius-md);">
+          <strong style="color: var(--accent-cyan); font-family: var(--font-heading); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.5px; display: block; margin-bottom: 0.5rem;">Challenge / Problem</strong>
+          <p id="pm-problem" style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;"></p>
+        </div>
+
+        <div style="background: var(--bg-subtle); border: 1px solid var(--border-light); padding: 1.25rem; border-radius: var(--radius-md);">
+          <strong style="color: var(--accent-cyan); font-family: var(--font-heading); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.5px; display: block; margin-bottom: 0.5rem;">Engineered Solution</strong>
+          <p id="pm-solution" style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;"></p>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-subtle); border: 1px solid var(--border-light); padding: 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
+        <strong style="color: var(--text-primary); font-family: var(--font-heading); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.5px; display: block; margin-bottom: 0.5rem;">Architecture & System Design</strong>
+        <p id="pm-architecture" style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;"></p>
+      </div>
+
+      <div style="background: var(--bg-subtle); border: 1px solid var(--border-light); padding: 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
+        <strong style="color: var(--accent-cyan); font-family: var(--font-heading); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.5px; display: block; margin-bottom: 0.5rem;">Key Capabilities & Features</strong>
+        <ul id="pm-features" class="exp-bullets" style="margin-top: 0.5rem;"></ul>
+      </div>
+
+      <div style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); padding: 1.25rem; border-radius: var(--radius-md);">
+        <strong style="color: var(--accent-cyan); font-family: var(--font-heading); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.5px; display: block; margin-bottom: 0.5rem;">Quantifiable Impact</strong>
+        <p id="pm-impact" style="color: var(--text-primary); font-size: 0.95rem; font-weight: 700; line-height: 1.6;"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9. HIGH-PERFORMANCE JS ENGINE (165Hz NATIVE CANVAS & INTERACTION HANDLERS) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initAmbientCanvas();
+      initApp();
+      initEmailRedirects();
+    });
+
+    /* -------------------------------------------------------------------------- */
+    /* 1. HIGH-PERFORMANCE 165Hz AMBIENT NEURAL NETWORK CANVAS                   */
+    /* -------------------------------------------------------------------------- */
+    function initAmbientCanvas() {
+      const canvas = document.getElementById('bg-canvas');
+      if (!canvas) return;
+
+      const ctx = canvas.getContext('2d');
+      let width = canvas.width = window.innerWidth;
+      let height = canvas.height = window.innerHeight;
+
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
+
+      const particleCount = Math.min(Math.floor(width / 30), 45);
+      const particles = [];
+
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          r: Math.random() * 2 + 1,
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: (Math.random() - 0.5) * 0.4,
+          alpha: Math.random() * 0.5 + 0.2
+        });
+      }
+
+      function render() {
+        ctx.clearRect(0, 0, width, height);
+
+        // Draw connections
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < 140) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = `rgba(56, 189, 248, ${0.12 * (1 - dist / 140)})`;
+              ctx.lineWidth = 0.8;
+              ctx.stroke();
+            }
+          }
+        }
+
+        // Draw particles
+        particles.forEach(p => {
+          p.x += p.vx;
+          p.y += p.vy;
+
+          if (p.x < 0) p.x = width;
+          if (p.x > width) p.x = 0;
+          if (p.y < 0) p.y = height;
+          if (p.y > height) p.y = 0;
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(56, 189, 248, ${p.alpha})`;
+          ctx.fill();
+        });
+
+        requestAnimationFrame(render);
+      }
+
+      requestAnimationFrame(render);
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /* 2. PORTFOLIO DATA RENDERER                                                 */
+    /* -------------------------------------------------------------------------- */
+    async function initApp() {
+      let portfolioData = null;
+      try {
+        const res = await fetch('assets/data/portfolio.json');
+        if (res.ok) {
+          portfolioData = await res.json();
+        }
+      } catch(e) {
+        console.warn('Using embedded portfolio data object.', e);
+      }
+
+      if (!portfolioData) {
+        portfolioData = getFallbackPortfolioData();
+      }
+
+      renderPortfolio(portfolioData);
+      initNavigation();
+      initModals(portfolioData);
+    }
+
+    function renderPortfolio(data) {
+      // 1. Skills
+      const skillsContainer = document.getElementById('skills-container');
+      if (skillsContainer && data.skills) {
+        skillsContainer.innerHTML = `
+          <div class="card">
+            <span class="card-badge">PROGRAMMING LANGUAGES</span>
+            <h3 class="card-title">Core Languages</h3>
+            <div class="skill-tags">
+              ${data.skills.programming.map(s => `
+                <span class="skill-pill expert">
+                  ${s.name}
+                </span>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="card">
+            <span class="card-badge">AI & MACHINE LEARNING</span>
+            <h3 class="card-title">Intelligence Technologies</h3>
+            <div class="skill-tags">
+              ${data.skills.ai_ml.map(s => `<span class="skill-pill">${s.name}</span>`).join('')}
+            </div>
+          </div>
+
+          <div class="card">
+            <span class="card-badge">WEB & BACKEND</span>
+            <h3 class="card-title">Frameworks & REST APIs</h3>
+            <div class="skill-tags">
+              ${data.skills.web_backend.map(s => `<span class="skill-pill">${s.name}</span>`).join('')}
+            </div>
+          </div>
+
+          <div class="card">
+            <span class="card-badge">DATABASES & CLOUD</span>
+            <h3 class="card-title">Infrastructure & Tooling</h3>
+            <div class="skill-tags">
+              ${data.skills.databases_tools.map(s => `<span class="skill-pill">${s.name}</span>`).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      // 2. Marquee
+      const marqueeTrack = document.getElementById('marquee-track');
+      if (marqueeTrack && data.skills) {
+        const allSkills = [
+          ...data.skills.programming.map(s => s.name),
+          ...data.skills.ai_ml.map(s => s.name),
+          ...data.skills.web_backend.map(s => s.name),
+          ...data.skills.databases_tools.map(s => s.name)
+        ];
+        const html = allSkills.map(s => `<div class="marquee-pill"><span style="color:var(--accent-cyan)">✦</span> ${s}</div>`).join('');
+        marqueeTrack.innerHTML = html + html;
+      }
+
+      // 3. Projects
+      const projectsContainer = document.getElementById('projects-container');
+      const categoryMap = {
+        "music-ai": "AUDIO SYNTHESIS PIPELINE",
+        "pothole-ai": "COMPUTER VISION TELEMETRY",
+        "nutrisync": "ANALYTICAL HEALTH ENGINE"
+      };
+
+      if (projectsContainer && data.projects) {
+        projectsContainer.innerHTML = data.projects.map(p => {
+          const categoryBadge = categoryMap[p.id] || "AI SYSTEM CASE STUDY";
+          return `
+            <article class="project-card">
+              <span class="project-category-badge">${categoryBadge}</span>
+              <h3 class="project-title">${p.name}</h3>
+              <p class="project-tagline">${p.tagline}</p>
+              
+              <div class="project-impact">
+                Quantifiable Impact: ${p.impact}
+              </div>
+
+              <div class="skill-tags" style="margin-bottom: 1.25rem;">
+                ${p.technologies.map(t => `<span class="skill-pill" style="font-size:0.78rem;">${t}</span>`).join('')}
+              </div>
+
+              <div class="project-footer">
+                <button class="btn btn-blue btn-case-study" data-project-id="${p.id}" style="padding: 0.8rem 1.4rem; font-size: 0.82rem; width: 100%;">
+                  <span>View Full Case Study</span>
+                  <span aria-hidden="true">&rarr;</span>
+                </button>
+              </div>
+            </article>
+          `;
+        }).join('');
+      }
+
+      // 4. Experience (Clickable cards & Certificate Viewer button)
+      const expContainer = document.getElementById('experience-container');
+      if (expContainer && data.experience) {
+        expContainer.innerHTML = data.experience.map(exp => `
+          <article class="exp-card btn-view-cert-card" data-cert-path="${exp.certificate || ''}" data-company="${exp.company}" data-role="${exp.role}" style="cursor:pointer;">
+            <div class="exp-header">
+              <div>
+                <div class="exp-company">${exp.company}</div>
+                <div class="exp-role">${exp.role} <small style="color:var(--text-muted); font-weight:400;">• ${exp.type}</small></div>
+              </div>
+              <span class="exp-timeline-badge">${exp.timeline} | ${exp.location}</span>
+            </div>
+            <ul class="exp-bullets">
+              ${exp.responsibilities.map(r => `<li>${r}</li>`).join('')}
+            </ul>
+            
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-top: 1.5rem;">
+              <div class="skill-tags">
+                ${exp.technologies.map(t => `<span class="skill-pill" style="font-size:0.78rem;">${t}</span>`).join('')}
+              </div>
+
+              <button class="btn btn-blue btn-view-cert" data-cert-path="${exp.certificate || ''}" data-company="${exp.company}" data-role="${exp.role}" style="padding:0.6rem 1.3rem; font-size:0.8rem;">
+                <span>View Internship Certificate</span>
+                <span aria-hidden="true">&rarr;</span>
+              </button>
+            </div>
+          </article>
+        `).join('');
+      }
+
+      // 5. Achievements & Certifications (BALANCED MULTI-COLUMN GRID, ZERO BLANK SPACE)
+      const achContainer = document.getElementById('achievements-container');
+      if (achContainer && data.achievements) {
+        achContainer.innerHTML = `
+          <div class="card">
+            <span class="card-badge">VERIFIED CREDENTIALS</span>
+            <h3 class="card-title" style="margin-bottom:1.5rem;">Professional Certifications</h3>
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:1.25rem;">
+              ${data.achievements.certifications.map(c => `
+                <div class="btn-view-cert-card" data-cert-path="${c.certificate || ''}" data-company="${c.issuer}" data-role="${c.name}" style="background:var(--bg-subtle); border:1px solid var(--border-light); padding:1.25rem 1.4rem; border-radius:var(--radius-md); display:flex; justify-content:space-between; align-items:center; gap:1.25rem; cursor:pointer; transition:var(--transition-fast);">
+                  <div style="flex:1 1 0%; min-width:0;">
+                    <strong style="color:var(--text-primary); font-family:var(--font-heading); font-size:0.96rem; display:block; line-height:1.4;">${c.name}</strong>
+                    <div style="color:var(--accent-cyan); font-size:0.82rem; font-weight:700; margin-top:0.25rem;">Issued by ${c.issuer}</div>
+                  </div>
+                  ${c.certificate ? `
+                    <div style="flex-shrink:0;">
+                      <button class="btn btn-blue btn-view-cert" data-cert-path="${c.certificate}" data-company="${c.issuer}" data-role="${c.name}" style="padding:0.5rem 1.15rem; font-size:0.8rem; white-space:nowrap;">
+                        <span>View Certificate</span>
+                        <span aria-hidden="true">&rarr;</span>
+                      </button>
+                    </div>
+                  ` : ''}
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="card">
+            <span class="card-badge">COMPETITIVE INNOVATION</span>
+            <h3 class="card-title" style="margin-bottom:1.5rem;">Hackathons & Accomplishments</h3>
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:1.25rem;">
+              ${data.achievements.hackathons.map(h => `
+                <div class="${h.certificate ? 'btn-view-cert-card' : ''}" data-cert-path="${h.certificate || ''}" data-company="Hackathon Achievement" data-role="${h.title}" style="background:var(--bg-subtle); border:1px solid var(--border-light); padding:1.25rem 1.4rem; border-radius:var(--radius-md); display:flex; justify-content:space-between; align-items:center; gap:1.25rem; ${h.certificate ? 'cursor:pointer;' : ''}">
+                  <div style="flex:1 1 0%; min-width:0;">
+                    <strong style="color:var(--text-primary); font-family:var(--font-heading); font-size:0.96rem; display:block; line-height:1.4;">${h.title}</strong>
+                    <div style="color:var(--accent-cyan); font-size:0.82rem; font-weight:700; margin-top:0.25rem;">${h.project}</div>
+                  </div>
+                  ${h.certificate ? `
+                    <div style="flex-shrink:0;">
+                      <button class="btn btn-blue btn-view-cert" data-cert-path="${h.certificate}" data-company="Hackathon Achievement" data-role="${h.title}" style="padding:0.5rem 1.15rem; font-size:0.8rem; white-space:nowrap;">
+                        <span>View Certificate</span>
+                        <span aria-hidden="true">&rarr;</span>
+                      </button>
+                    </div>
+                  ` : ''}
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      // 6. Contact Info Cards
+      const contactContainer = document.getElementById('contact-cards');
+      if (contactContainer && data.profile) {
+        const p = data.profile;
+        contactContainer.innerHTML = `
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=${p.email}" target="_blank" rel="noopener noreferrer" class="contact-card btn-email-trigger">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div style="font-family:var(--font-heading); font-size:1.1rem; font-weight:800; color:var(--text-primary);">Email Direct</div>
+            <div class="contact-val" title="${p.email}">${p.email}</div>
+          </a>
+
+          <a href="tel:${p.phone.replace(/\s+/g, '')}" class="contact-card">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div style="font-family:var(--font-heading); font-size:1.1rem; font-weight:800; color:var(--text-primary);">Phone</div>
+            <div class="contact-val">${p.phone}</div>
+          </a>
+
+          <a href="${p.social.linkedin}" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </div>
+            <div style="font-family:var(--font-heading); font-size:1.1rem; font-weight:800; color:var(--text-primary);">LinkedIn</div>
+            <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:0.4rem;">Connect Professionally</div>
+          </a>
+
+          <a href="${p.social.github}" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </div>
+            <div style="font-family:var(--font-heading); font-size:1.1rem; font-weight:800; color:var(--text-primary);">GitHub</div>
+            <div style="color:var(--text-secondary); font-size:0.9rem; margin-top:0.4rem;">Source Repositories</div>
+          </a>
+        `;
+      }
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /* 3. ROBUST GMAIL WEB COMPOSER + CLIPBOARD COPY + TOAST ENGINE (BLANK SUBJECT) */
+    /* -------------------------------------------------------------------------- */
+    function initEmailRedirects() {
+      document.addEventListener('click', (e) => {
+        const mailTrigger = e.target.closest('.btn-email-trigger, a[href*="mailto:"]');
+        if (mailTrigger) {
+          e.preventDefault();
+          const email = 'swethankarthik.avvari@gmail.com';
+          const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
+
+          // Copy email to clipboard instantly
+          if (navigator.clipboard) {
+            navigator.clipboard.writeText(email).catch(() => {});
+          }
+
+          // Show toast pill
+          showToast('Copied swethankarthik.avvari@gmail.com & launching Gmail...');
+
+          // Open Gmail web composer with completely blank subject
+          window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+
+          // Fallback mailto dispatch with blank subject
+          setTimeout(() => {
+            window.location.href = `mailto:${email}`;
+          }, 400);
+        }
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast-pill');
+      if (!toast) return;
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3500);
+    }
+
+    function initNavigation() {
+      const header = document.getElementById('site-header');
+      const mobileBtn = document.getElementById('mobile-toggle-btn');
+      const mobileDrawer = document.getElementById('mobile-drawer');
+      const navLinks = document.querySelectorAll('#desktop-nav a, #mobile-drawer a');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 30) {
+          header?.classList.add('scrolled');
+        } else {
+          header?.classList.remove('scrolled');
+        }
+      });
+
+      if (mobileBtn && mobileDrawer) {
+        mobileBtn.addEventListener('click', () => {
+          mobileDrawer.classList.toggle('active');
+        });
+
+        mobileDrawer.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileDrawer.classList.remove('active');
+          });
+        });
+      }
+
+      const sections = document.querySelectorAll('section[id]');
+      window.addEventListener('scroll', () => {
+        let currentId = '';
+        const scrollPos = window.scrollY + 180;
+
+        sections.forEach(sec => {
+          if (scrollPos >= sec.offsetTop && scrollPos < sec.offsetTop + sec.offsetHeight) {
+            currentId = sec.getAttribute('id');
+          }
+        });
+
+        if (currentId) {
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${currentId}`) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }
+
+    function initModals(data) {
+      // 1. Resume Modal
+      const resumeTriggers = document.querySelectorAll('.btn-resume-modal-trigger');
+      const resumeModal = document.getElementById('resume-modal');
+      const closeResumeBtn = document.getElementById('close-resume-modal-btn');
+      const downloadBtn = document.getElementById('resume-download-btn');
+      const fullscreenBtn = document.getElementById('resume-fullscreen-btn');
+      const resumeModalBox = document.querySelector('#resume-modal .modal');
+
+      function openResume() {
+        if (resumeModal) {
+          resumeModal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+
+      function closeResume() {
+        if (resumeModal) {
+          resumeModal.classList.remove('active');
+          if (document.fullscreenElement) {
+            if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
+          }
+          if (resumeModalBox) resumeModalBox.classList.remove('is-fullscreen');
+          if (fullscreenBtn) fullscreenBtn.innerHTML = `<span>Fullscreen</span> <span aria-hidden="true">&rarr;</span>`;
+          document.body.style.overflow = '';
+        }
+      }
+
+      resumeTriggers.forEach(btn => btn.addEventListener('click', openResume));
+      if (closeResumeBtn) closeResumeBtn.addEventListener('click', closeResume);
+      if (resumeModal) {
+        resumeModal.addEventListener('click', (e) => {
+          if (e.target === resumeModal) closeResume();
+        });
+      }
+
+      // DISTINCT FUNCTIONALITY 1: Direct File Download Trigger
+      if (downloadBtn) {
+        downloadBtn.addEventListener('click', async (e) => {
+          e.preventDefault();
+          try {
+            const res = await fetch('assets/resume/resume.pdf');
+            const blob = await res.blob();
+            const blobUrl = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = blobUrl;
+            a.download = 'Avvari_Swethan_Karthik_Resume.pdf';
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            URL.revokeObjectURL(blobUrl);
+            showToast('Downloading Avvari_Swethan_Karthik_Resume.pdf...');
+          } catch(err) {
+            window.open('assets/resume/resume.pdf', '_blank');
+          }
+        });
+      }
+
+      // DISTINCT FUNCTIONALITY 2: Live HTML5 Fullscreen View Mode Toggle
+      if (fullscreenBtn && resumeModalBox) {
+        fullscreenBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const isFull = resumeModalBox.classList.contains('is-fullscreen');
+
+          if (!isFull) {
+            if (resumeModalBox.requestFullscreen) {
+              resumeModalBox.requestFullscreen().catch(() => {});
+            } else if (resumeModalBox.webkitRequestFullscreen) {
+              resumeModalBox.webkitRequestFullscreen();
+            }
+            resumeModalBox.classList.add('is-fullscreen');
+            fullscreenBtn.innerHTML = `<span>Exit Fullscreen</span> <span aria-hidden="true">&times;</span>`;
+            showToast('Entered Fullscreen View Mode');
+          } else {
+            if (document.fullscreenElement) {
+              if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
+              else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+            }
+            resumeModalBox.classList.remove('is-fullscreen');
+            fullscreenBtn.innerHTML = `<span>Fullscreen</span> <span aria-hidden="true">&rarr;</span>`;
+            showToast('Exited Fullscreen View Mode');
+          }
+        });
+
+        document.addEventListener('fullscreenchange', () => {
+          if (!document.fullscreenElement && resumeModalBox.classList.contains('is-fullscreen')) {
+            resumeModalBox.classList.remove('is-fullscreen');
+            fullscreenBtn.innerHTML = `<span>Fullscreen</span> <span aria-hidden="true">&rarr;</span>`;
+          }
+        });
+      }
+
+      // 2. Certificate Viewer Modal (PDF.js high-DPI zero-margin canvas rendering)
+      const certModal = document.getElementById('certificate-modal');
+      const closeCertBtn = document.getElementById('close-cert-modal-btn');
+      const certTitle = document.getElementById('cert-modal-title');
+      const certCompany = document.getElementById('cert-modal-company');
+      const certContainer = document.getElementById('cert-view-container');
+      const certDownloadBtn = document.getElementById('cert-modal-download-btn');
+
+      async function renderPdfToCanvas(url) {
+        try {
+          if (typeof pdfjsLib !== 'undefined') {
+            pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+            const loadingTask = pdfjsLib.getDocument(url);
+            const pdf = await loadingTask.promise;
+            const page = await pdf.getPage(1);
+            
+            const canvas = document.getElementById('cert-pdf-canvas');
+            if (!canvas) return;
+
+            const viewport = page.getViewport({ scale: 2.0 }); // 2x high resolution
+            canvas.width = viewport.width;
+            canvas.height = viewport.height;
+            
+            const ctx = canvas.getContext('2d');
+            const renderContext = {
+              canvasContext: ctx,
+              viewport: viewport
+            };
+            await page.render(renderContext).promise;
+          } else {
+            fallbackIframe(url);
+          }
+        } catch(e) {
+          console.warn('PDF.js render fallback:', e);
+          fallbackIframe(url);
+        }
+      }
+
+      function fallbackIframe(url) {
+        if (certContainer) {
+          certContainer.innerHTML = `<iframe id="cert-modal-iframe" src="${url}#toolbar=0&navpanes=0&scrollbar=0&view=Fit" class="pdf-iframe" style="width:100%; height:100%; min-height:55vh; border:none; display:block;" title="Certificate Document Viewer"></iframe>`;
+        }
+      }
+
+      function openCertificate(certPath, company, role) {
+        if (!certModal || !certPath) return;
+        if (certTitle) certTitle.textContent = role;
+        if (certCompany) certCompany.textContent = `${company} • Verified Credentials Document`;
+        
+        const isImage = /\.(png|jpe?g|webp|gif|svg)(\?.*)?$/i.test(certPath);
+
+        if (certContainer) {
+          if (isImage) {
+            certContainer.innerHTML = `<img src="${certPath}" alt="${role}" style="width:100%; height:auto; max-height:75vh; object-fit:contain; display:block; border-radius:var(--radius-md);" />`;
+          } else {
+            certContainer.innerHTML = `<canvas id="cert-pdf-canvas" style="width:100%; height:auto; max-height:75vh; object-fit:contain; display:block; border-radius:var(--radius-md);"></canvas>`;
+            renderPdfToCanvas(certPath);
+          }
+        }
+
+        if (certDownloadBtn) {
+          certDownloadBtn.href = certPath;
+          const ext = certPath.split('.').pop() || 'pdf';
+          certDownloadBtn.setAttribute('download', `${role.replace(/\s+/g, '_')}_Certificate.${ext}`);
+        }
+        certModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeCertificate() {
+        if (certModal) {
+          certModal.classList.remove('active');
+          if (certContainer) certContainer.innerHTML = '';
+          document.body.style.overflow = '';
+        }
+      }
+
+      document.addEventListener('click', (e) => {
+        const certTrigger = e.target.closest('.btn-view-cert, .btn-view-cert-card');
+        if (certTrigger) {
+          const certPath = certTrigger.getAttribute('data-cert-path');
+          const company = certTrigger.getAttribute('data-company');
+          const role = certTrigger.getAttribute('data-role');
+          if (certPath) {
+            openCertificate(certPath, company, role);
+          }
+        }
+      });
+
+      if (closeCertBtn) closeCertBtn.addEventListener('click', closeCertificate);
+      if (certModal) {
+        certModal.addEventListener('click', (e) => {
+          if (e.target === certModal) closeCertificate();
+        });
+      }
+
+      // 3. Project Case Study Modal
+      const projectModal = document.getElementById('project-modal');
+      const closeProjBtn = document.getElementById('close-project-modal-btn');
+
+      function openProject(p) {
+        if (!projectModal || !p) return;
+        document.getElementById('pm-title').textContent = p.name || '';
+        document.getElementById('pm-subtitle').textContent = p.tagline || '';
+        document.getElementById('pm-problem').textContent = p.problem || '';
+        document.getElementById('pm-solution').textContent = p.solution || '';
+        document.getElementById('pm-architecture').textContent = p.architecture || '';
+        document.getElementById('pm-impact').textContent = p.impact || '';
+
+        const tagsEl = document.getElementById('pm-tags');
+        if (tagsEl && p.technologies) {
+          tagsEl.innerHTML = p.technologies.map(t => `<span class="skill-pill">${t}</span>`).join('');
+        }
+
+        const featuresEl = document.getElementById('pm-features');
+        if (featuresEl && p.keyFeatures) {
+          featuresEl.innerHTML = p.keyFeatures.map(f => `<li>${f}</li>`).join('');
+        }
+
+        projectModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeProject() {
+        if (projectModal) {
+          projectModal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+
+      document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.btn-case-study');
+        if (btn) {
+          const projId = btn.getAttribute('data-project-id');
+          const projData = data.projects ? data.projects.find(item => item.id === projId) : null;
+          if (projData) openProject(projData);
+        }
+      });
+
+      if (closeProjBtn) closeProjBtn.addEventListener('click', closeProject);
+      if (projectModal) {
+        projectModal.addEventListener('click', (e) => {
+          if (e.target === projectModal) closeProject();
+        });
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeResume();
+          closeCertificate();
+          closeProject();
+        }
+      });
+    }
+
+    function getFallbackPortfolioData() {
+      return {
+        "profile": {
+          "firstName": "Avvari",
+          "middleName": "Swethan",
+          "lastName": "Karthik",
+          "titles": ["AI Engineer", "Software Developer", "Backend Architect"],
+          "tagline": "Computer Science (AI & ML) 2027 Graduate specializing in scalable AI systems.",
+          "summary": "Computer Science (AI & ML) 2027 graduate with Accenture internship experience, specializing in Python, PyTorch, and scalable AI microservices.",
+          "email": "swethankarthik.avvari@gmail.com",
+          "phone": "+91 94535 82606",
+          "location": "Vijayawada, Andhra Pradesh, India",
+          "social": {
+            "linkedin": "https://linkedin.com/in/swethan-karthik/",
+            "github": "https://github.com/swethankarthik"
+          }
+        },
+        "education": {
+          "degree": "Bachelor of Technology (B.Tech) — Computer Science and Engineering (AI & ML)",
+          "institution": "NRI Institute of Technology",
+          "location": "Pothavarappadu, Andhra Pradesh",
+          "timeline": "2023–2027 (2027 Graduate)",
+          "aggregateScore": "8.9 CGPA",
+          "aggregateNote": "Cumulative up to 3rd Year, 2nd Semester",
+          "details": "Specialized in Artificial Intelligence, Deep Learning, Generative Models, Natural Language Processing, Computer Vision, and Enterprise Backend System Architecture."
+        },
+        "experience": [
+          {
+            "id": "accenture",
+            "role": "Associate Software Engineer Intern",
+            "company": "Accenture",
+            "location": "Hyderabad, India",
+            "type": "Summer Internship",
+            "timeline": "May 2026 – Jul 2026",
+            "certificate": "assets/certificates/accenture_certificate.pdf",
+            "responsibilities": [
+              "Developed agentic AI solutions for text summarization, FAQ assistance, meeting analysis, and multi-agent research workflows.",
+              "Built scalable serverless REST APIs using Python, Azure Functions, Azure OpenAI, and structured backend architecture.",
+              "Gained hands-on experience in prompt engineering, cloud AI application development, API integration, and agile software engineering."
+            ],
+            "technologies": ["Agentic AI", "Azure OpenAI", "Azure Functions", "Python", "REST APIs", "Prompt Engineering"]
+          },
+          {
+            "id": "infosys",
+            "role": "Artificial Intelligence Intern",
+            "company": "Infosys Springboard 6.0",
+            "location": "Remote",
+            "type": "Internship",
+            "timeline": "Aug 2025 – Sep 2025",
+            "certificate": "assets/certificates/infosys_certificate.pdf",
+            "responsibilities": [
+              "Built 'Mood Music AI,' an intelligent emotion-based music generation system.",
+              "Implemented NLP and Generative AI pipelines in Python to seamlessly map text to audio.",
+              "Mastered end-to-end AI product development from theoretical modeling to functional deployment."
+            ],
+            "technologies": ["Mood Music AI", "NLP", "Generative AI", "Python", "Audio Pipelines"]
+          },
+          {
+            "id": "coincent",
+            "role": "Artificial Intelligence Intern",
+            "company": "Coincent.ai (IIT Madras e-Cell)",
+            "location": "Remote",
+            "type": "Internship",
+            "timeline": "Aug 2024 – Oct 2024",
+            "certificate": "assets/certificates/coincent_certificate.pdf",
+            "responsibilities": [
+              "Developed a predictive machine learning model focused on automated handwriting analysis.",
+              "Executed end-to-end data preprocessing, model training, and hyperparameter tuning in Python.",
+              "Strengthened foundational ML engineering, model evaluation, and data-driven problem-solving skills."
+            ],
+            "technologies": ["Machine Learning", "Handwriting Analysis", "Python", "Data Preprocessing", "Hyperparameter Tuning"]
+          }
+        ],
+        "projects": [
+          {
+            "id": "music-ai",
+            "name": "AI-Based Music Composition System",
+            "tagline": "Text-to-audio emotion-aligned music generation web application",
+            "problem": "Addressed the manual, time-consuming process content creators face when sourcing royalty-free, emotion-specific background audio.",
+            "solution": "Engineered a complete text-to-audio generation web application utilizing Python, PyTorch, Hugging Face Transformers, and Streamlit to output mood-aligned music tracks.",
+            "impact": "Automates background score synthesis for creators without licensing delays.",
+            "architecture": "Implemented a seamless pipeline combining BART Large MNLI for mood classification and MusicGen to instantly automate custom music generation.",
+            "keyFeatures": ["NLP mood classification via BART Large MNLI", "Automated melody synthesis with MusicGen", "Interactive Streamlit control panel"],
+            "technologies": ["Python", "PyTorch", "Hugging Face", "Streamlit", "BART Large MNLI", "MusicGen"]
+          },
+          {
+            "id": "pothole-ai",
+            "name": "Pothole Detection and Reporting System",
+            "tagline": "High-performance computer vision backend for road damage reporting",
+            "problem": "Targeted the inefficiency of manual municipal road inspections that lead to delayed hazard reporting and maintenance.",
+            "solution": "Developed a high-performance computer vision backend utilizing YOLOv8, FastAPI, and Python to process visual video feeds and extract GPS-tagged road damage data.",
+            "impact": "Reduces municipal hazard reporting latency to real-time API triggers.",
+            "architecture": "Automated the hazard identification process by routing structured detection data through RESTful APIs, facilitating rapid and accurate municipal reporting.",
+            "keyFeatures": ["Real-time video stream object detection with YOLOv8", "GPS hazard coordinate extraction", "RESTful API dispatch via FastAPI"],
+            "technologies": ["YOLOv8", "FastAPI", "Python", "Computer Vision", "GPS Telemetry"]
+          },
+          {
+            "id": "nutrisync",
+            "name": "NutriSync: AI-Powered Personalized Dietitian System",
+            "tagline": "API-driven diet planning engine with dynamic caloric algorithms",
+            "problem": "Solved the complexity individuals face when manually calculating macronutrients and translating raw health metrics into actionable dietary goals.",
+            "solution": "Built an automated, API-driven diet planning engine in Python, integrating PDF generation libraries to dynamically calculate complex caloric and macronutrient algorithms.",
+            "impact": "Converts raw biometric metrics into downloadable custom diet reports instantly.",
+            "architecture": "Streamlined nutritional tracking by building a dynamic backend system that instantly processes user parameters to serve customized, downloadable diet plan reports.",
+            "keyFeatures": ["Dynamic macro algorithm calculation", "Instant PDF report generation", "Modular backend architecture"],
+            "technologies": ["Python", "PDF Generation", "API Engine", "Nutritional Algorithms"]
+          }
+        ],
+        "skills": {
+          "programming": [{ "name": "Python" }, { "name": "Java" }, { "name": "C" }],
+          "ai_ml": [{ "name": "PyTorch" }, { "name": "YOLOv8" }, { "name": "Hugging Face Transformers" }, { "name": "NLP" }, { "name": "Computer Vision" }, { "name": "Generative AI" }],
+          "web_backend": [{ "name": "FastAPI" }, { "name": "Streamlit" }, { "name": "React" }, { "name": "HTML5" }, { "name": "CSS3" }, { "name": "JavaScript" }],
+          "databases_tools": [{ "name": "MongoDB" }, { "name": "Firebase" }, { "name": "SQL Server" }, { "name": "Git" }, { "name": "GitHub" }, { "name": "VS Code" }, { "name": "Jupyter Notebook" }]
+        },
+        "achievements": {
+          "certifications": [
+            {
+              "name": "Salesforce Agentforce Specialist Certification",
+              "issuer": "Salesforce",
+              "certificate": "assets/certificates/salesforce_agentforce_certificate.pdf"
+            },
+            {
+              "name": "HackerRank Python (Basic) Certification",
+              "issuer": "HackerRank",
+              "certificate": "assets/certificates/hackerrank_python_certificate.pdf"
+            },
+            {
+              "name": "NPTEL — Introduction to Internet of Things",
+              "issuer": "NPTEL / IIT Kharagpur",
+              "certificate": "assets/certificates/nptel_iot_certificate.pdf"
+            },
+            {
+              "name": "DX Edge Professional Certification",
+              "issuer": "DX Edge",
+              "certificate": "assets/certificates/dx_edge_certificate.png"
+            },
+            {
+              "name": "Avishkandhra State Govt Certification",
+              "issuer": "Government of Andhra Pradesh",
+              "certificate": "assets/certificates/avishkandhra_ap_govt_certificate.pdf"
+            },
+            {
+              "name": "APSSDC Summer Internship Certification",
+              "issuer": "APSSDC",
+              "certificate": "assets/certificates/apssdc_certificate.pdf"
+            },
+            {
+              "name": "Coding Missions Internship Certification",
+              "issuer": "Coding Missions",
+              "certificate": "assets/certificates/coding_missions_certificate.pdf"
+            },
+            {
+              "name": "Motioncut Internship Completion Certificate",
+              "issuer": "Motioncut",
+              "certificate": "assets/certificates/motioncut_certificate.pdf"
+            }
+          ],
+          "hackathons": [
+            {
+              "title": "Adobe Hackathon (Round 1) Participation",
+              "project": "National Qualifier",
+              "certificate": "assets/certificates/adobe_hackathon_certificate.pdf"
+            },
+            {
+              "title": "Google Cloud Agentic AI Hackathon",
+              "project": "Multi-Agent System Build"
+            },
+            {
+              "title": "MindSprint Hackathon",
+              "project": "Participant"
+            },
+            {
+              "title": "HackVibe 2K25",
+              "project": "Participant"
+            }
+          ]
+        }
+      };
+    }
+  </script>
+</body>
+</html>
