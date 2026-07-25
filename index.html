@@ -646,15 +646,15 @@
           <div class="card">
             <span class="card-badge">VERIFIED CREDENTIALS</span>
             <h3 class="card-title" style="margin-bottom:1.5rem;">Professional Certifications</h3>
-            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:1.25rem;">
+            <div class="cert-card-grid">
               ${data.achievements.certifications.map(c => `
-                <div class="btn-view-cert-card" data-cert-path="${c.certificate || ''}" data-company="${c.issuer}" data-role="${c.name}" style="background:var(--bg-subtle); border:1px solid var(--border-light); padding:1.25rem 1.4rem; border-radius:var(--radius-md); display:flex; justify-content:space-between; align-items:center; gap:1.25rem; cursor:pointer; transition:var(--transition-fast);">
-                  <div style="flex:1 1 0%; min-width:0;">
-                    <strong style="color:var(--text-primary); font-family:var(--font-heading); font-size:0.96rem; display:block; line-height:1.4;">${c.name}</strong>
-                    <div style="color:var(--accent-cyan); font-size:0.82rem; font-weight:700; margin-top:0.25rem;">Issued by ${c.issuer}</div>
+                <div class="cert-card-item btn-view-cert-card" data-cert-path="${c.certificate || ''}" data-company="${c.issuer}" data-role="${c.name}">
+                  <div class="cert-card-info">
+                    <strong class="cert-card-title">${c.name}</strong>
+                    <div class="cert-card-issuer">Issued by ${c.issuer}</div>
                   </div>
                   ${c.certificate ? `
-                    <div style="flex-shrink:0;">
+                    <div class="cert-card-action">
                       <button class="btn btn-blue btn-view-cert" data-cert-path="${c.certificate}" data-company="${c.issuer}" data-role="${c.name}" style="padding:0.5rem 1.15rem; font-size:0.8rem; white-space:nowrap;">
                         <span>View Certificate</span>
                         <span aria-hidden="true">&rarr;</span>
@@ -669,15 +669,15 @@
           <div class="card">
             <span class="card-badge">COMPETITIVE INNOVATION</span>
             <h3 class="card-title" style="margin-bottom:1.5rem;">Hackathons & Accomplishments</h3>
-            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:1.25rem;">
+            <div class="cert-card-grid">
               ${data.achievements.hackathons.map(h => `
-                <div class="${h.certificate ? 'btn-view-cert-card' : ''}" data-cert-path="${h.certificate || ''}" data-company="Hackathon Achievement" data-role="${h.title}" style="background:var(--bg-subtle); border:1px solid var(--border-light); padding:1.25rem 1.4rem; border-radius:var(--radius-md); display:flex; justify-content:space-between; align-items:center; gap:1.25rem; ${h.certificate ? 'cursor:pointer;' : ''}">
-                  <div style="flex:1 1 0%; min-width:0;">
-                    <strong style="color:var(--text-primary); font-family:var(--font-heading); font-size:0.96rem; display:block; line-height:1.4;">${h.title}</strong>
-                    <div style="color:var(--accent-cyan); font-size:0.82rem; font-weight:700; margin-top:0.25rem;">${h.project}</div>
+                <div class="cert-card-item ${h.certificate ? 'btn-view-cert-card' : ''}" data-cert-path="${h.certificate || ''}" data-company="Hackathon Achievement" data-role="${h.title}" style="${h.certificate ? '' : 'cursor:default;'}">
+                  <div class="cert-card-info">
+                    <strong class="cert-card-title">${h.title}</strong>
+                    <div class="cert-card-issuer">${h.project}</div>
                   </div>
                   ${h.certificate ? `
-                    <div style="flex-shrink:0;">
+                    <div class="cert-card-action">
                       <button class="btn btn-blue btn-view-cert" data-cert-path="${h.certificate}" data-company="Hackathon Achievement" data-role="${h.title}" style="padding:0.5rem 1.15rem; font-size:0.8rem; white-space:nowrap;">
                         <span>View Certificate</span>
                         <span aria-hidden="true">&rarr;</span>

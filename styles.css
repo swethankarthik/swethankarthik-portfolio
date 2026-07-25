@@ -847,12 +847,65 @@ section:last-of-type {
   color: var(--text-primary);
 }
 
-/* 9. ACHIEVEMENTS GRID */
+/* 9. ACHIEVEMENTS GRID & CREDENTIAL CARDS */
 .achievements-grid {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   width: 100%;
+}
+
+.cert-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.cert-card-item {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-light);
+  padding: 1.25rem 1.4rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  width: 100%;
+}
+
+.cert-card-item:hover {
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+}
+
+.cert-card-info {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.cert-card-title {
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: 0.96rem;
+  display: block;
+  line-height: 1.4;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+}
+
+.cert-card-issuer {
+  color: var(--accent-cyan);
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-top: 0.3rem;
+}
+
+.cert-card-action {
+  flex-shrink: 0;
 }
 
 /* 10. DIRECT CONTACT GRID (BALANCED SINGLE-LINE EMAIL) */
@@ -1210,5 +1263,24 @@ section:last-of-type {
   .cert-view-wrapper {
     height: auto;
     max-height: 60vh;
+  }
+  .cert-card-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .cert-card-item {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.85rem !important;
+    padding: 1.1rem 1rem !important;
+  }
+  .cert-card-info {
+    width: 100% !important;
+  }
+  .cert-card-action {
+    width: 100% !important;
+  }
+  .cert-card-action .btn {
+    width: 100% !important;
+    justify-content: center !important;
   }
 }
