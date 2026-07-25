@@ -845,13 +845,32 @@
             const pdf = await loadingTask.promise;
             
             container.innerHTML = '';
-            const containerWidth = Math.min(container.clientWidth || (window.innerWidth - 32), 860);
+
+            const isMobile = window.innerWidth <= 640;
+            const isFullscreen = resumeModalBox && resumeModalBox.classList.contains('is-fullscreen');
+            
+            const wrapper = container.closest('.pdf-view-wrapper');
+            const wrapperHeight = (wrapper ? wrapper.clientHeight : 0) || (window.innerHeight - 110);
+            const wrapperWidth = (wrapper ? wrapper.clientWidth : 0) || (window.innerWidth - 32);
 
             for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
               const page = await pdf.getPage(pageNum);
               const unscaledViewport = page.getViewport({ scale: 1.0 });
+              const pdfAspect = unscaledViewport.width / unscaledViewport.height;
               
-              const targetScale = (containerWidth / unscaledViewport.width);
+              let targetWidth;
+              if (isMobile) {
+                targetWidth = Math.min(wrapperWidth - 8, 500);
+              } else if (isFullscreen) {
+                // Dynamically fit to available viewport height so page fills the viewer with zero bottom empty space!
+                const fitHeightWidth = (wrapperHeight - 20) * pdfAspect;
+                targetWidth = Math.min(fitHeightWidth, wrapperWidth - 32, 900);
+              } else {
+                const fitHeightWidth = (wrapperHeight - 24) * pdfAspect;
+                targetWidth = Math.min(fitHeightWidth, 820);
+              }
+
+              const targetScale = targetWidth / unscaledViewport.width;
               const dpr = Math.min(window.devicePixelRatio || 1.5, 2);
               const viewport = page.getViewport({ scale: targetScale * dpr });
 
@@ -859,7 +878,7 @@
               canvas.className = 'pdf-page-canvas';
               canvas.width = Math.floor(viewport.width);
               canvas.height = Math.floor(viewport.height);
-              canvas.style.width = '100%';
+              canvas.style.width = `${Math.floor(targetWidth)}px`;
               canvas.style.height = 'auto';
               canvas.style.display = 'block';
 
@@ -898,7 +917,7 @@
 
       function closeResume() {
         if (resumeModal) {
-          resumeModal.classList.remove('active');
+          resumeModal.classList.remove('active', 'is-fullscreen-active');
           try {
             if (document.fullscreenElement) {
               if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
@@ -964,6 +983,7 @@
               }
             } catch(err) {}
             resumeModalBox.classList.add('is-fullscreen');
+            if (resumeModal) resumeModal.classList.add('is-fullscreen-active');
             fullscreenBtn.innerHTML = `<span>Exit Fullscreen</span> <span aria-hidden="true">&times;</span>`;
             setTimeout(() => {
               renderResumePdfToCanvas('assets/resume/resume.pdf');
@@ -976,6 +996,7 @@
               }
             } catch(err) {}
             resumeModalBox.classList.remove('is-fullscreen');
+            if (resumeModal) resumeModal.classList.remove('is-fullscreen-active');
             fullscreenBtn.innerHTML = `<span>Fullscreen</span> <span aria-hidden="true">&rarr;</span>`;
             setTimeout(() => {
               renderResumePdfToCanvas('assets/resume/resume.pdf');
@@ -986,6 +1007,7 @@
         document.addEventListener('fullscreenchange', () => {
           if (!document.fullscreenElement && resumeModalBox.classList.contains('is-fullscreen')) {
             resumeModalBox.classList.remove('is-fullscreen');
+            if (resumeModal) resumeModal.classList.remove('is-fullscreen-active');
             fullscreenBtn.innerHTML = `<span>Fullscreen</span> <span aria-hidden="true">&rarr;</span>`;
             setTimeout(() => {
               renderResumePdfToCanvas('assets/resume/resume.pdf');
