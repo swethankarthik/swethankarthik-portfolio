@@ -310,25 +310,25 @@
     <div class="modal" role="dialog" aria-label="Official Resume Viewer">
       <button id="close-resume-modal-btn" class="close" title="Close Modal">&times;</button>
 
-      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem; padding-right:3rem; margin-bottom:1rem;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.75rem; padding-right:3rem; margin-bottom:0.75rem;">
         <div>
-          <div style="font-family: var(--font-heading); color: var(--accent-cyan); font-weight: 800; letter-spacing: 0.5px; font-size: 0.78rem; text-transform:uppercase; margin-bottom: 0.2rem;">
+          <div style="font-family: var(--font-heading); color: var(--accent-cyan); font-weight: 800; letter-spacing: 0.5px; font-size: 0.75rem; text-transform:uppercase; margin-bottom: 0.2rem;">
             // VERIFIED CREDENTIAL
           </div>
-          <h2 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--text-primary); margin-bottom: 0.2rem;">
+          <h2 style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.2rem; line-height:1.2;">
             Avvari Swethan Karthik — Official Resume
           </h2>
-          <p style="color: var(--text-secondary); font-size: 0.88rem;">
+          <p class="modal-header-sub" style="color: var(--text-secondary); font-size: 0.85rem;">
             Computer Science (AI & ML) Engineer • 2027 Graduate • 8.9 CGPA
           </p>
         </div>
 
-        <div style="display:flex; gap:0.6rem; align-items:center;">
-          <button id="resume-download-btn" class="btn btn-blue" style="padding:0.65rem 1.4rem; font-size:0.8rem;" type="button">
+        <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap;">
+          <button id="resume-download-btn" class="btn btn-blue" style="padding:0.55rem 1.15rem; font-size:0.8rem;" type="button">
             <span>Download PDF</span>
             <span aria-hidden="true">&rarr;</span>
           </button>
-          <button id="resume-fullscreen-btn" class="btn btn-dark" style="padding:0.65rem 1.4rem; font-size:0.8rem;" type="button">
+          <button id="resume-fullscreen-btn" class="btn btn-dark" style="padding:0.55rem 1.15rem; font-size:0.8rem;" type="button">
             <span>Fullscreen</span>
             <span aria-hidden="true">&rarr;</span>
           </button>
@@ -336,12 +336,7 @@
       </div>
       
       <div class="pdf-view-wrapper">
-        <iframe src="assets/resume/resume.pdf#toolbar=0&navpanes=0&scrollbar=1&view=FitH" class="pdf-iframe" title="Resume Document Viewer">
-          <p style="color: var(--text-secondary); padding: 2rem; text-align: center;">
-            Your browser does not support inline PDF previews. Download the file directly:
-            <a href="assets/resume/resume.pdf" download="Avvari_Swethan_Karthik_Resume.pdf" style="color: var(--accent-cyan);">Download Resume PDF</a>
-          </p>
-        </iframe>
+        <div id="resume-pdf-container" style="width:100%;"></div>
       </div>
     </div>
   </div>
@@ -833,24 +828,96 @@
       const fullscreenBtn = document.getElementById('resume-fullscreen-btn');
       const resumeModalBox = document.querySelector('#resume-modal .modal');
 
+      let resizeTimer;
+
+      async function renderResumePdfToCanvas(url) {
+        const container = document.getElementById('resume-pdf-container');
+        if (!container) return;
+
+        if (!container.firstElementChild) {
+          container.innerHTML = `<div style="display:flex; justify-content:center; align-items:center; min-height:260px; color:var(--accent-cyan); font-family:var(--font-heading); font-size:0.9rem; font-weight:700;">Loading Resume Document...</div>`;
+        }
+
+        try {
+          if (typeof pdfjsLib !== 'undefined') {
+            pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+            const loadingTask = pdfjsLib.getDocument(url);
+            const pdf = await loadingTask.promise;
+            
+            container.innerHTML = '';
+            const containerWidth = container.clientWidth || (window.innerWidth - 32);
+
+            for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+              const page = await pdf.getPage(pageNum);
+              const unscaledViewport = page.getViewport({ scale: 1.0 });
+              
+              const targetScale = (containerWidth / unscaledViewport.width);
+              const dpr = Math.min(window.devicePixelRatio || 1.5, 2);
+              const viewport = page.getViewport({ scale: targetScale * dpr });
+
+              const canvas = document.createElement('canvas');
+              canvas.className = 'pdf-page-canvas';
+              canvas.width = Math.floor(viewport.width);
+              canvas.height = Math.floor(viewport.height);
+              canvas.style.width = '100%';
+              canvas.style.height = 'auto';
+              canvas.style.display = 'block';
+
+              container.appendChild(canvas);
+
+              const ctx = canvas.getContext('2d');
+              const renderContext = {
+                canvasContext: ctx,
+                viewport: viewport
+              };
+              await page.render(renderContext).promise;
+            }
+          } else {
+            fallbackResumeIframe(url);
+          }
+        } catch(e) {
+          console.warn('PDF.js resume render fallback:', e);
+          fallbackResumeIframe(url);
+        }
+      }
+
+      function fallbackResumeIframe(url) {
+        const container = document.getElementById('resume-pdf-container');
+        if (container) {
+          container.innerHTML = `<iframe src="${url}#toolbar=0&navpanes=0&scrollbar=1&view=FitH" class="pdf-iframe" style="width:100%; height:100%; min-height:60vh; border:none; display:block;" title="Resume Document Viewer"></iframe>`;
+        }
+      }
+
       function openResume() {
         if (resumeModal) {
           resumeModal.classList.add('active');
           document.body.style.overflow = 'hidden';
+          renderResumePdfToCanvas('assets/resume/resume.pdf');
         }
       }
 
       function closeResume() {
         if (resumeModal) {
           resumeModal.classList.remove('active');
-          if (document.fullscreenElement) {
-            if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
-          }
+          try {
+            if (document.fullscreenElement) {
+              if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
+            }
+          } catch(err) {}
           if (resumeModalBox) resumeModalBox.classList.remove('is-fullscreen');
           if (fullscreenBtn) fullscreenBtn.innerHTML = `<span>Fullscreen</span> <span aria-hidden="true">&rarr;</span>`;
           document.body.style.overflow = '';
         }
       }
+
+      window.addEventListener('resize', () => {
+        if (resumeModal && resumeModal.classList.contains('active')) {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(() => {
+            renderResumePdfToCanvas('assets/resume/resume.pdf');
+          }, 200);
+        }
+      });
 
       resumeTriggers.forEach(btn => btn.addEventListener('click', openResume));
       if (closeResumeBtn) closeResumeBtn.addEventListener('click', closeResume);
@@ -882,29 +949,37 @@
         });
       }
 
-      // DISTINCT FUNCTIONALITY 2: Live HTML5 Fullscreen View Mode Toggle
+      // DISTINCT FUNCTIONALITY 2: Live Responsive Fullscreen View Mode Toggle
       if (fullscreenBtn && resumeModalBox) {
         fullscreenBtn.addEventListener('click', (e) => {
           e.preventDefault();
           const isFull = resumeModalBox.classList.contains('is-fullscreen');
 
           if (!isFull) {
-            if (resumeModalBox.requestFullscreen) {
-              resumeModalBox.requestFullscreen().catch(() => {});
-            } else if (resumeModalBox.webkitRequestFullscreen) {
-              resumeModalBox.webkitRequestFullscreen();
-            }
+            try {
+              if (resumeModalBox.requestFullscreen) {
+                resumeModalBox.requestFullscreen().catch(() => {});
+              } else if (resumeModalBox.webkitRequestFullscreen) {
+                resumeModalBox.webkitRequestFullscreen();
+              }
+            } catch(err) {}
             resumeModalBox.classList.add('is-fullscreen');
             fullscreenBtn.innerHTML = `<span>Exit Fullscreen</span> <span aria-hidden="true">&times;</span>`;
-            showToast('Entered Fullscreen View Mode');
+            setTimeout(() => {
+              renderResumePdfToCanvas('assets/resume/resume.pdf');
+            }, 100);
           } else {
-            if (document.fullscreenElement) {
-              if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
-              else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
-            }
+            try {
+              if (document.fullscreenElement) {
+                if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
+                else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+              }
+            } catch(err) {}
             resumeModalBox.classList.remove('is-fullscreen');
             fullscreenBtn.innerHTML = `<span>Fullscreen</span> <span aria-hidden="true">&rarr;</span>`;
-            showToast('Exited Fullscreen View Mode');
+            setTimeout(() => {
+              renderResumePdfToCanvas('assets/resume/resume.pdf');
+            }, 100);
           }
         });
 
@@ -912,6 +987,9 @@
           if (!document.fullscreenElement && resumeModalBox.classList.contains('is-fullscreen')) {
             resumeModalBox.classList.remove('is-fullscreen');
             fullscreenBtn.innerHTML = `<span>Fullscreen</span> <span aria-hidden="true">&rarr;</span>`;
+            setTimeout(() => {
+              renderResumePdfToCanvas('assets/resume/resume.pdf');
+            }, 100);
           }
         });
       }
