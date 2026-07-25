@@ -179,13 +179,11 @@ h1, h2, h3, h4, h5, h6, p, a, span, div, li, button {
 
 .brand-logo:hover .logo-mark {
   border-color: var(--accent-cyan);
-  box-shadow: 0 0 15px var(--accent-cyan-glow);
   transform: translateY(-1px);
 }
 
 .logo-initial-a {
   color: var(--accent-cyan);
-  text-shadow: 0 0 14px var(--accent-cyan-glow);
 }
 
 .logo-initial-sk {
@@ -359,25 +357,23 @@ section:last-of-type {
 /* MAIN HERO NAME STYLED IN AUDIOWIDE FUTURISTIC GOOGLE FONT (SINGLE-LINE FLUID RESPONSIVE & EXTRA BOLD) */
 .hero-full-name {
   font-family: var(--font-audiowide);
-  font-size: clamp(1.1rem, 3.8vw, 4.1rem);
+  font-size: clamp(1.4rem, 5.2vw, 4.1rem);
   font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: 1.5px;
+  line-height: 1.25;
+  letter-spacing: 1px;
   margin-bottom: 1rem;
   color: var(--text-primary);
   max-width: 100%;
   width: 100%;
   text-transform: uppercase;
-  white-space: nowrap;
-  text-shadow: 0 0 2px rgba(255, 255, 255, 0.9), 0 0 25px var(--accent-cyan-glow);
-  -webkit-text-stroke: 0.6px rgba(255, 255, 255, 0.35);
+  white-space: normal;
+  word-break: break-word;
 }
 
 .hero-full-name .name-highlight {
   background: linear-gradient(135deg, #ffffff 0%, var(--accent-cyan) 60%, var(--accent-blue) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 35px var(--accent-cyan-glow));
 }
 
 /* SHORT HERO SUMMARY DIRECTLY BELOW NAME */
@@ -1100,7 +1096,9 @@ section:last-of-type {
     grid-template-columns: 1fr;
   }
   .hero-full-name {
-    font-size: clamp(1rem, 3.8vw, 3.2rem);
+    font-size: clamp(1.3rem, 4.8vw, 3.2rem);
+    white-space: normal;
+    word-break: break-word;
   }
 }
 
@@ -1112,7 +1110,9 @@ section:last-of-type {
     padding: 4rem 0;
   }
   .hero-full-name {
-    font-size: clamp(0.9rem, 4.5vw, 2.2rem);
+    font-size: clamp(1.2rem, 6.5vw, 2.2rem);
+    white-space: normal;
+    word-break: break-word;
   }
   .exp-header {
     flex-direction: column;
