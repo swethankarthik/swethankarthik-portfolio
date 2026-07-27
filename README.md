@@ -11,7 +11,7 @@
 
 **Computer Science (AI & ML) 2027 Graduate • AI Engineer • Backend Architect**
 
-[🌐 View Live Portfolio](https://swethankarthik.github.io/swethankarthik-portfolio/) • [💼 LinkedIn](https://linkedin.com/in/swethan-karthik/) • [📬 Contact Me](mailto:swethankarthik.avvari@gmail.com)
+[🌐 View Live Portfolio](https://swethankarthik-portfolio.vercel.app/) • [💼 LinkedIn](https://linkedin.com/in/swethan-karthik/) • [📬 Contact Me](mailto:swethankarthik.avvari@gmail.com)
 
 ---
 
